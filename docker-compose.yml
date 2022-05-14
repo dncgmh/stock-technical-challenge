@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  service:
+    build: .
+    container_name: stock
+    hostname: stock
+    ports:
+      - 3000:3000
+    networks:
+      - app-network
+    volumes:
+      - ./src/:/app/src/
+    restart: unless-stopped
+networks:
+  app-network:
+    name: app-network
+    driver: bridge

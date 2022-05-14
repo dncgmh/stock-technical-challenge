@@ -1,0 +1,24 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Stock {
+  code: String!
+  growth: Float!
+}
+
+type GrowthStockResponseDto {
+  min: Stock!
+  max: Stock!
+}
+
+type Query {
+  healthy: String!
+}
+
+type Mutation {
+  getMinMaxGrowthStockFromFile(file: Upload!): GrowthStockResponseDto!
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
